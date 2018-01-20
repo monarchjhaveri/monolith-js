@@ -1,0 +1,16 @@
+.moButton,
+.moSpan
+{
+  display: inline-block;
+}
+
+
+.moButton {
+  background-color: lightblue;
+  padding: 5px 10px;
+}
+
+.moSpan {
+
+}
+

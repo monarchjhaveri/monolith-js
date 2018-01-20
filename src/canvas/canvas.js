@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import CanvasApp from './CanvasApp';
+import Core from './core/Core';
 import './canvas.css';
+import './components/components.css';
 
-ReactDOM.render(<CanvasApp />, document.getElementById('root'));
+const core = new Core(document.getElementById('root'));
+core.init();
 
