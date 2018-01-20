@@ -1,7 +1,7 @@
 const path = require('path');
 module.exports = {
   entry: {
-    parent: './src/parent/parent.js',
+    main: './src/main/main.js',
     canvas: './src/canvas/canvas.js'
   },
   output: {
