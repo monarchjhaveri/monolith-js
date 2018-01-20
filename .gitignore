@@ -1,0 +1,3 @@
+node_modules/
+dist/canvas_bundle.js
+dist/parent_bundle.js
