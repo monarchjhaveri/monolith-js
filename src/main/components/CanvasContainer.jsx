@@ -4,7 +4,7 @@ class CanvasContainer extends Component {
   render() {
     return (
       <div className="canvasContainer">
-        <h2>CanvasContainer</h2>
+        <iframe className="canvasIFrame" src="canvas.html" />
       </div>
     );
   }

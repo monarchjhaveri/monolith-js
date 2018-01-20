@@ -34,3 +34,13 @@ html, body, #root, .App {
   padding: 5px;
   background-color: lightblue;
 }
+
+.canvasContainer {
+  padding: 20px;
+}
+.canvasIFrame {
+  width: 1024px;
+  height: 768px;  
+  resize: both;
+  overflow: auto;
+}
