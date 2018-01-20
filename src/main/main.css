@@ -27,7 +27,7 @@ html, body, #root, .App {
   background-color: lightblue;
 }
 
-.leftPanel .panelItem {
+.leftPanel .leftPanelItem {
   width: 100%;
   overflow-x: hidden;
   border-bottom: 1px solid black;
@@ -43,4 +43,14 @@ html, body, #root, .App {
   height: 768px;  
   resize: both;
   overflow: auto;
+}
+
+.tool {
+  color: #3f3f3f;
+  width: 100%;
+  cursor: pointer;
+}
+
+.tool:hover {
+  color: blue;
 }

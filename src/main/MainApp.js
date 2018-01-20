@@ -7,10 +7,10 @@ class MainApp extends Component {
     return (
       <div className="MainApp">
         <div className="leftPanel">
-          <div className="panelItem">
+          <div className="leftPanelItem">
             <h1>Monolith</h1>
           </div>
-          <div className="panelItem">
+          <div className="leftPanelItem">
             <Toolbox />
           </div>
         </div>
