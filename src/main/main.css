@@ -1,3 +1,36 @@
 * {
-  background-color: grey;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html, body, #root, .App {
+  height: 100%;
+}
+
+.stage {
+  position: fixed;
+  left: 200px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: black;
+}
+
+.leftPanel {
+  position: fixed;
+  width: 200px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: lightblue;
+}
+
+.leftPanel .panelItem {
+  width: 100%;
+  overflow-x: hidden;
+  border-bottom: 1px solid black;
+  padding: 5px;
+  background-color: lightblue;
 }
