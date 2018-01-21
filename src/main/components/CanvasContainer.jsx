@@ -1,12 +1,25 @@
 import React, { Component } from 'react';
 
 class CanvasContainer extends Component {
+
   render() {
     return (
       <div className="canvasContainer">
-        <iframe className="canvasIFrame" src="canvas.html" />
+        <iframe ref="iFrame" className="canvasIFrame" src="canvas.html" />
       </div>
     );
+  }
+
+  componentDidMount() {
+    this.retargetCore();
+  }
+
+  componentDidUpdate() {
+    this.retargetCore();
+  }
+
+  retargetCore() {
+    window.MainCore.retarget(this.refs.iFrame);
   }
 }
 
