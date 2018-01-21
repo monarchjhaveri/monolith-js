@@ -1,8 +1,8 @@
 const path = require('path');
 module.exports = {
   entry: {
-    main: './src/main/main.js',
-    canvas: './src/canvas/canvas.js'
+    main: './src/main/main.tsx',
+    canvas: './src/canvas/canvas.ts'
   },
   output: {
     path: path.resolve('dist'),
@@ -11,8 +11,11 @@ module.exports = {
   module: {
     rules: [
       { test: /\.jsx?$/, exclude: /node_modules/, loader: "babel-loader" },
-      { test: /\.css$/, use: [ 'style-loader', 'css-loader' ]
-      }
+      { test: /\.css$/, use: [ 'style-loader', 'css-loader' ]},
+      // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
+      { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
+      // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
     ]
   },
   devServer: {
@@ -21,6 +24,6 @@ module.exports = {
     port: 3000
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
   }
 }

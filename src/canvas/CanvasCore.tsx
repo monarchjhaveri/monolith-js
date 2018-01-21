@@ -1,14 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import CanvasApp from './CanvasApp';
 import MoText from './components/MoText';
 import MoButton from './components/MoButton';
 
 export default class CanvasCore {
-  constructor(rootElement) {
-    this.rootElement = rootElement;
-    this.definition = [];
-  }
+  private definition = [];
+  constructor(private rootElement) {}
 
   init() {
     this.draw();

@@ -1,6 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 
-export default class Editable extends React.Component {
+export interface EditableProps {
+  moId: number
+};
+
+export class Editable extends React.Component<EditableProps> {
   render() {
     return (
       <span className="editable" onClick={() => componentClicked(this.props.moId)}>

@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import Toolbox from './components/Toolbox';
 import CanvasContainer from './components/CanvasContainer';
 
-class MainApp extends Component {
+class MainApp extends React.Component {
   render() {
     return (
       <div className="MainApp">

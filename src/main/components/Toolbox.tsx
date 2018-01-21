@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 
-class Toolbox extends Component {
+class Toolbox extends React.Component {
   render() {
     return (
       <div className="toolbox">

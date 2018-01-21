@@ -1,8 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import MainApp from './MainApp';
 import MainCore from './MainCore';
 import './main.css';
+
+declare global {
+  interface Window { MainCore: MainCore}
+}
 
 const core = window.MainCore = new MainCore();
 ReactDOM.render(<MainApp />, document.getElementById('root'));

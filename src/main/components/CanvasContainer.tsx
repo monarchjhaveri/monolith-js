@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 
-class CanvasContainer extends Component {
+class CanvasContainer extends React.Component {
 
   render() {
     return (

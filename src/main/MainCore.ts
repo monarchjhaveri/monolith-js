@@ -1,10 +1,8 @@
 const uuid = require('uuid/v4');
 
 export default class MainCore {
-  constructor(iFrame) {
-    this.iFrame = iFrame;
-    this.definition = [];
-  }
+  private iFrame;
+  private definition: Array<any> = [];
 
   addComponent(definition) {
     definition.moId = uuid();
