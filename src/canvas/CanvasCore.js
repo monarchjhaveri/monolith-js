@@ -31,9 +31,9 @@ export default class CanvasCore {
 function itemMapper(item, index) {
   switch(item.type) {
     case 'button':
-      return (<MoButton key={index} properties={item.properties}/>);
+      return (<MoButton key={index} text={item.properties.text}/>);
     case 'text':
-      return (<MoText key={index} properties={item.properties}/>);
+      return (<MoText key={index} text={item.properties.text}/>);
     default:
       console.error("Unknown item in itemMapper", item);
       return null;

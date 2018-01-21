@@ -2,8 +2,9 @@ import React from 'react';
 
 export default class MoText extends React.Component {
   render() {
+    console.log(this.props);
     return (
-      <span>MoText</span>
+      <span>{this.props.text}</span>
     )
   }
 }
