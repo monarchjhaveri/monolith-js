@@ -19,9 +19,9 @@ export default class CanvasCore {
     this.draw();
   }
 
-  editComponent(moId) {
+  componentClicked(moId) {
     window.top.postMessage({
-      type: 'EDIT_COMPONENT',
+      type: 'COMPONENT_CLICKED',
       payload: { moId }
     }, '*');
   }

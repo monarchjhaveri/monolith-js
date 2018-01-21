@@ -11,9 +11,9 @@ window.addEventListener("message", function({data}) {
   if (!data) return;
 
   switch(data.type) {
-    case 'EDIT_COMPONENT':
-      core.editComponent(data.payload);
+    case 'COMPONENT_CLICKED':
+      core.componentClicked(data.payload);
     default:
       null;
   }
-})
+});

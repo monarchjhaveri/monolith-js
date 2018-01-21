@@ -3,13 +3,13 @@ import React from 'react';
 export default class Editable extends React.Component {
   render() {
     return (
-      <span className="editable" onClick={() => editComponent(this.props.moId)}>
+      <span className="editable" onClick={() => componentClicked(this.props.moId)}>
         {this.props.children}
       </span>
     )
   }
 }
 
-function editComponent(moId) {
-  window.CanvasCore.editComponent(moId);
+function componentClicked(moId) {
+  window.CanvasCore.componentClicked(moId);
 }

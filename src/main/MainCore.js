@@ -12,7 +12,7 @@ export default class MainCore {
     this.updateApp();
   }
 
-  editComponent({moId}) {
+  componentClicked({moId}) {
     const component = this.definition.find(item => {
       if (item.moId === moId) return true;
     });
