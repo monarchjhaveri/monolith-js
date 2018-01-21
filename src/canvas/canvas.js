@@ -8,7 +8,6 @@ core.init();
 window.addEventListener("message", function({data}) {
   if (!data) return;
 
-  console.log("OK", data.type);
   switch(data.type) {
     case 'UPDATE_APP':
       core.updateApp(data.payload);

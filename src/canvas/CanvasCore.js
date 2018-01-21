@@ -19,6 +19,13 @@ export default class CanvasCore {
     this.draw();
   }
 
+  editComponent(moId) {
+    window.top.postMessage({
+      type: 'EDIT_COMPONENT',
+      payload: { moId }
+    }, '*');
+  }
+
   draw() {
     ReactDOM.render(buildComponentTree(this.definition), this.rootElement);
   }
@@ -31,9 +38,9 @@ export default class CanvasCore {
 function itemMapper(item, index) {
   switch(item.type) {
     case 'button':
-      return (<MoButton key={index} text={item.properties.text}/>);
+      return (<MoButton key={item.moId} moId={item.moId} text={item.properties.text}/>);
     case 'text':
-      return (<MoText key={index} text={item.properties.text}/>);
+      return (<MoText key={item.moId} moId={item.moId} text={item.properties.text}/>);
     default:
       console.error("Unknown item in itemMapper", item);
       return null;

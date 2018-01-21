@@ -1,9 +1,14 @@
 import React from 'react';
+import Editable from './Editable';
 
 export default class MoButton extends React.Component {
   render() {
     return (
-      <div className="moButton">{this.props.text}</div>
+      <Editable moId={this.props.moId}>
+        <div className="moButton">
+          {this.props.text}
+        </div>
+      </Editable>
     )
   }
 }

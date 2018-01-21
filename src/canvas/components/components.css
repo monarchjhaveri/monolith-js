@@ -1,16 +1,21 @@
 .moButton,
-.moSpan
+.moText
 {
   display: inline-block;
+  box-sizing: border-box;
 }
-
 
 .moButton {
   background-color: lightblue;
   padding: 5px 10px;
 }
 
-.moSpan {
+.moText {
 
+}
+
+.editable > *:hover {
+  cursor: pointer;
+  background: orange;
 }
 
