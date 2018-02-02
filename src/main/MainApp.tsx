@@ -1,8 +1,10 @@
 import * as React from 'react';
-import Toolbox from './components/Toolbox';
-import CanvasContainer from './components/CanvasContainer';
+import { ToolboxContainer } from './components/ToolboxContainer';
+import { CanvasContainer } from './components/CanvasContainer';
+import { connect } from 'react-redux';
+import { State, StateUtils } from './model/State';
 
-class MainApp extends React.Component {
+class MainAppComponent extends React.Component {
   render() {
     return (
       <div className="MainApp">
@@ -11,7 +13,7 @@ class MainApp extends React.Component {
             <h1>Monolith</h1>
           </div>
           <div className="leftPanelItem">
-            <Toolbox />
+            <ToolboxContainer />
           </div>
         </div>
         <div className="stage">
@@ -21,5 +23,7 @@ class MainApp extends React.Component {
     );
   }
 }
+
+const MainApp = connect(null, null)(MainAppComponent);
 
 export default MainApp;

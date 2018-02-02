@@ -1,7 +1,19 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
+import { State } from '../model/State';
+import { MoComponentDefinition } from '../model/MoComponentDefinition' 
 
-class CanvasContainer extends React.Component {
+interface StateProps {
+  definition: MoComponentDefinition[]
+}
 
+const mapStateToProps = ({definition}: State): StateProps => {
+  return {
+    definition
+  };
+};
+
+class Canvas extends React.Component<null, StateProps> {
   render() {
     return (
       <div className="canvasContainer">
@@ -10,17 +22,15 @@ class CanvasContainer extends React.Component {
     );
   }
 
-  componentDidMount() {
-    this.retargetCore();
-  }
-
-  componentDidUpdate() {
-    this.retargetCore();
-  }
-
-  retargetCore() {
-    window.MainCore.retarget(this.refs.iFrame);
+  componentWillReceiveProps(nextProps) {
+    console.log("PROPS!", nextProps);
+    const iFrame = this.refs.iFrame as any;
+   
+    iFrame.contentWindow.postMessage({
+      type: 'UPDATE_APP',
+      payload: nextProps.definition
+    }, '*');
   }
 }
 
-export default CanvasContainer;
+export const CanvasContainer = connect(mapStateToProps, null)(Canvas); 

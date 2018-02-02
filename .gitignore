@@ -1,3 +1,4 @@
 node_modules/
 dist/canvas_bundle.js
 dist/main_bundle.js
+.idea/
